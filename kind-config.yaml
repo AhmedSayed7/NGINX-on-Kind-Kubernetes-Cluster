@@ -1,0 +1,17 @@
+# three node (two workers) cluster config with port mapping on control-plane
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+nodes:
+  - role: control-plane
+    extraPortMappings:
+      - containerPort: 30080
+        hostPort: 30080
+        protocol: TCP
+  - role: worker
+    extraMounts:
+      - hostPath: /home/abracadabra/devops-directive-kubernetes-course/03-installation-and-setup/kind-bind-mount-1
+        containerPath: /some/path/in/container
+  - role: worker
+    extraMounts:
+      - hostPath: /home/abracadabra/devops-directive-kubernetes-course/03-installation-and-setup/kind-bind-mount-2
+        containerPath: /some/path/in/container
