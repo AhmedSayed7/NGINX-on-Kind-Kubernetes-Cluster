@@ -9,9 +9,9 @@ nodes:
         protocol: TCP
   - role: worker
     extraMounts:
-      - hostPath: /home/abracadabra/devops-directive-kubernetes-course/03-installation-and-setup/kind-bind-mount-1
+      - hostPath: /home/ahmed/devops-directive-kubernetes-course/03-installation-and-setup/kind-bind-mount-1
         containerPath: /some/path/in/container
   - role: worker
     extraMounts:
-      - hostPath: /home/abracadabra/devops-directive-kubernetes-course/03-installation-and-setup/kind-bind-mount-2
+      - hostPath: /home/ahmed/devops-directive-kubernetes-course/03-installation-and-setup/kind-bind-mount-2
         containerPath: /some/path/in/container
